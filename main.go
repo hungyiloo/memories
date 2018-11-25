@@ -8,7 +8,7 @@ import (
 	"os"
 	"runtime/pprof"
 
-	"github.com/bovarysme/memories/attack"
+	"./attack"
 )
 
 var bruteforce bool

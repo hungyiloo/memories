@@ -10,7 +10,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/bovarysme/memories/crypto/aes"
+	"../crypto/aes"
 )
 
 func readCiphertext(source string) ([]byte, error) {

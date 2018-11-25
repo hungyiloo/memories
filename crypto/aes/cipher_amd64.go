@@ -7,7 +7,7 @@ package aes
 import (
 	"crypto/cipher"
 
-	"github.com/bovarysme/memories/crypto/internal/cipherhw"
+	"../internal/cipherhw"
 )
 
 // defined in asm_amd64.s
