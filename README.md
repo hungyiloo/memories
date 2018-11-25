@@ -15,6 +15,14 @@ database is the `linebackup/chat/chat<id>` file (and *not* the one with the
 `.extra` extension). Note: `chat<id>` and `chat<id>.extra` need to be in the
 same directory for the decryption program to work.
 
+Recover your MID and your chat partner's MID:
+1. Make sure you are in at least one group, hopefully with the person of interest.
+2. Go to the group conversation. From the overflow (3-dot) menu on the right, open "Chat Info"
+3. Open developer tools (F12) and inspect the member list.
+4. You should see each member as a `<li>` element with a `data-mid` attribute set to each contact's MID
+
+If your chat partner is not in a group with you, you can use developer tools to inspect your chat/contact list for a similar `data-mid` attribute.
+
 Decrypt an encrypted chat database (requires both your MID and your chat
 partner's):
 ```
@@ -35,7 +43,7 @@ digits (e.g. `u61726520762e206375746520f09f929c`), which is refered to as
 you can set in the app, and from the `userId` exposed by the LINE Messaging
 API.) While it isn't visible to end users, it isn't secret either: I recovered
 mine and my chat partners' using LINE for Google Chrome and Chrome's developer
-tools.
+tools (see usage instructions above).
 
 When a chat backup is created, both IDs are concatenated and
 [`hashCode()`](https://en.wikipedia.org/wiki/Java_hashCode()#The_java.lang.String_hash_function)ed.
